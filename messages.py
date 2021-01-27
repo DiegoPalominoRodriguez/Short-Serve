@@ -1,5 +1,4 @@
-from PyQt5.QtWidgets import QMessageBox
-from gui import *
+from Legacy.gui import *
 
 def verify(l_limit,h_limit, mode):
     if mode == 0:
@@ -26,7 +25,6 @@ def verify(l_limit,h_limit, mode):
                 return 1
             else:
                 try:
-                    number = float(i)
                     if float(i) < 0 or float(i) > 255:
                         warn3()
                         return 1
@@ -48,7 +46,7 @@ def warn1():
 def warn2():
     msg = QMessageBox()
     msg.setWindowTitle("Warning")
-    msg.setText("All the required inputs need to be typed.")
+    msg.setText("All the required inputs need to be typed")
     msg.setIcon(QMessageBox.Warning)
     msg.exec_()
 
@@ -59,9 +57,10 @@ def warn3():
     msg.setIcon(QMessageBox.Warning)
     msg.exec_()
 
-def wanr4():
+def warn4():
     msg = QMessageBox()
     msg.setWindowTitle("Warning")
     msg.setText("Detection process failed. Video file or parameters must be modified.")
     msg.setIcon(QMessageBox.Warning)
     msg.exec_()
+

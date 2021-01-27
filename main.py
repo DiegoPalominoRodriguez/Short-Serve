@@ -35,7 +35,7 @@ def main(path, l_limit, h_limit, mode):
     p_frame = output[3]
 
     if len(x) == 0:
-        wanr4()
+        warn4()
         img = './images/error.png'
         output = np.array([img, img, 0, 0, 0, 0, 0, 0], dtype=object)
         return output
@@ -114,4 +114,6 @@ def main(path, l_limit, h_limit, mode):
             cap.release()
         output = np.array([img_seg, img_show, t_frames, perc, i_frame, des, xline, xmin], dtype = object)
         return output
+
+
 

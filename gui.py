@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'multiGUI4.ui'
+# Form implementation generated from reading ui file 'multiGUI6.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.2
 #
@@ -13,6 +13,7 @@ from PyQt5.QtGui import QPixmap
 from main import *
 from PyQt5.QtWidgets import QMessageBox
 from messages import *
+
 
 class Ui_MainWindow(object):
     def load(self):
@@ -46,8 +47,6 @@ class Ui_MainWindow(object):
             self.b_lxc.setText(str(output[6]))
             self.b_bxc.setText(str(output[7]))
 
-
-
     def grayscale(self):
         try:
             path
@@ -66,9 +65,9 @@ class Ui_MainWindow(object):
                 img2 = QPixmap(output[1])
 
                 img1 = img1.scaled(300, 300, aspectRatioMode=QtCore.Qt.KeepAspectRatio,
-                                    transformMode=QtCore.Qt.SmoothTransformation)
+                                   transformMode=QtCore.Qt.SmoothTransformation)
                 img2 = img2.scaled(300, 300, aspectRatioMode=QtCore.Qt.KeepAspectRatio,
-                                    transformMode=QtCore.Qt.SmoothTransformation)
+                                   transformMode=QtCore.Qt.SmoothTransformation)
                 self.g_seg.setPixmap(img1)
                 self.g_outf.setPixmap(img2)
 
@@ -127,28 +126,22 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setEnabled(True)
-        MainWindow.resize(717, 686)
+        MainWindow.resize(717, 690)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.tabWidget = QtWidgets.QTabWidget(self.centralwidget)
-        self.tabWidget.setGeometry(QtCore.QRect(0, 0, 711, 631))
+        self.tabWidget.setGeometry(QtCore.QRect(0, 0, 711, 641))
         font = QtGui.QFont()
-        font.setPointSize(14)
+        font.setPointSize(12)
         self.tabWidget.setFont(font)
         self.tabWidget.setObjectName("tabWidget")
         self.tab = QtWidgets.QWidget()
         self.tab.setObjectName("tab")
         self.b_start = QtWidgets.QPushButton(self.tab)
         self.b_start.setGeometry(QtCore.QRect(50, 80, 141, 61))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.b_start.setFont(font)
         self.b_start.setObjectName("b_start")
         self.groupBox_9 = QtWidgets.QGroupBox(self.tab)
         self.groupBox_9.setGeometry(QtCore.QRect(350, 480, 231, 101))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.groupBox_9.setFont(font)
         self.groupBox_9.setObjectName("groupBox_9")
         self.b_des = QtWidgets.QLabel(self.groupBox_9)
         self.b_des.setGeometry(QtCore.QRect(10, 40, 211, 51))
@@ -162,9 +155,6 @@ class Ui_MainWindow(object):
         self.b_des.setObjectName("b_des")
         self.groupBox_12 = QtWidgets.QGroupBox(self.tab)
         self.groupBox_12.setGeometry(QtCore.QRect(250, 20, 431, 211))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.groupBox_12.setFont(font)
         self.groupBox_12.setObjectName("groupBox_12")
         self.b_seg = QtWidgets.QLabel(self.groupBox_12)
         self.b_seg.setGeometry(QtCore.QRect(40, 30, 341, 181))
@@ -172,9 +162,6 @@ class Ui_MainWindow(object):
         self.b_seg.setObjectName("b_seg")
         self.groupBox_13 = QtWidgets.QGroupBox(self.tab)
         self.groupBox_13.setGeometry(QtCore.QRect(250, 250, 431, 211))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.groupBox_13.setFont(font)
         self.groupBox_13.setObjectName("groupBox_13")
         self.b_outf = QtWidgets.QLabel(self.groupBox_13)
         self.b_outf.setGeometry(QtCore.QRect(40, 30, 341, 181))
@@ -182,15 +169,9 @@ class Ui_MainWindow(object):
         self.b_outf.setObjectName("b_outf")
         self.b_load = QtWidgets.QPushButton(self.tab)
         self.b_load.setGeometry(QtCore.QRect(20, 30, 201, 31))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.b_load.setFont(font)
         self.b_load.setObjectName("b_load")
         self.groupBox_10 = QtWidgets.QGroupBox(self.tab)
-        self.groupBox_10.setGeometry(QtCore.QRect(10, 150, 211, 411))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.groupBox_10.setFont(font)
+        self.groupBox_10.setGeometry(QtCore.QRect(10, 180, 211, 411))
         self.groupBox_10.setObjectName("groupBox_10")
         self.b_lx_4 = QtWidgets.QLabel(self.groupBox_10)
         self.b_lx_4.setGeometry(QtCore.QRect(10, 240, 111, 21))
@@ -205,42 +186,27 @@ class Ui_MainWindow(object):
         self.gridLayout_3 = QtWidgets.QGridLayout()
         self.gridLayout_3.setObjectName("gridLayout_3")
         self.label_31 = QtWidgets.QLabel(self.verticalLayoutWidget_4)
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.label_31.setFont(font)
         self.label_31.setObjectName("label_31")
         self.gridLayout_3.addWidget(self.label_31, 0, 0, 1, 1)
         self.b_fout = QtWidgets.QLabel(self.verticalLayoutWidget_4)
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.b_fout.setFont(font)
         self.b_fout.setText("")
         self.b_fout.setAlignment(QtCore.Qt.AlignCenter)
         self.b_fout.setObjectName("b_fout")
         self.gridLayout_3.addWidget(self.b_fout, 0, 1, 1, 1)
         self.b_imp = QtWidgets.QLabel(self.verticalLayoutWidget_4)
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.b_imp.setFont(font)
         self.b_imp.setText("")
         self.b_imp.setAlignment(QtCore.Qt.AlignCenter)
         self.b_imp.setObjectName("b_imp")
         self.gridLayout_3.addWidget(self.b_imp, 2, 1, 1, 1)
         self.label_34 = QtWidgets.QLabel(self.verticalLayoutWidget_4)
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.label_34.setFont(font)
         self.label_34.setObjectName("label_34")
         self.gridLayout_3.addWidget(self.label_34, 3, 0, 1, 1)
         self.label_33 = QtWidgets.QLabel(self.verticalLayoutWidget_4)
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.label_33.setFont(font)
         self.label_33.setObjectName("label_33")
         self.gridLayout_3.addWidget(self.label_33, 2, 0, 1, 1)
         self.b_lxc = QtWidgets.QLabel(self.verticalLayoutWidget_4)
         font = QtGui.QFont()
-        font.setPointSize(14)
+        font.setPointSize(12)
         font.setBold(False)
         font.setWeight(50)
         self.b_lxc.setFont(font)
@@ -249,28 +215,19 @@ class Ui_MainWindow(object):
         self.b_lxc.setObjectName("b_lxc")
         self.gridLayout_3.addWidget(self.b_lxc, 3, 1, 1, 1)
         self.b_pout = QtWidgets.QLabel(self.verticalLayoutWidget_4)
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.b_pout.setFont(font)
         self.b_pout.setText("")
         self.b_pout.setAlignment(QtCore.Qt.AlignCenter)
         self.b_pout.setObjectName("b_pout")
         self.gridLayout_3.addWidget(self.b_pout, 1, 1, 1, 1)
         self.label_32 = QtWidgets.QLabel(self.verticalLayoutWidget_4)
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.label_32.setFont(font)
         self.label_32.setObjectName("label_32")
         self.gridLayout_3.addWidget(self.label_32, 1, 0, 1, 1)
         self.label_35 = QtWidgets.QLabel(self.verticalLayoutWidget_4)
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.label_35.setFont(font)
         self.label_35.setObjectName("label_35")
         self.gridLayout_3.addWidget(self.label_35, 4, 0, 1, 1)
         self.b_bxc = QtWidgets.QLabel(self.verticalLayoutWidget_4)
         font = QtGui.QFont()
-        font.setPointSize(14)
+        font.setPointSize(12)
         font.setBold(False)
         font.setWeight(50)
         self.b_bxc.setFont(font)
@@ -367,7 +324,7 @@ class Ui_MainWindow(object):
         self.gridLayout_4.addWidget(self.label_51, 2, 0, 1, 1)
         self.g_lxc = QtWidgets.QLabel(self.verticalLayoutWidget_5)
         font = QtGui.QFont()
-        font.setPointSize(14)
+        font.setPointSize(12)
         font.setBold(False)
         font.setWeight(50)
         self.g_lxc.setFont(font)
@@ -388,7 +345,7 @@ class Ui_MainWindow(object):
         self.gridLayout_4.addWidget(self.label_53, 4, 0, 1, 1)
         self.g_bxc = QtWidgets.QLabel(self.verticalLayoutWidget_5)
         font = QtGui.QFont()
-        font.setPointSize(14)
+        font.setPointSize(12)
         font.setBold(False)
         font.setWeight(50)
         self.g_bxc.setFont(font)
@@ -520,7 +477,7 @@ class Ui_MainWindow(object):
         self.gridLayout_6.addWidget(self.label_56, 2, 0, 1, 1)
         self.hsv_lxc = QtWidgets.QLabel(self.verticalLayoutWidget_6)
         font = QtGui.QFont()
-        font.setPointSize(14)
+        font.setPointSize(12)
         font.setBold(False)
         font.setWeight(50)
         self.hsv_lxc.setFont(font)
@@ -541,7 +498,7 @@ class Ui_MainWindow(object):
         self.gridLayout_6.addWidget(self.label_58, 4, 0, 1, 1)
         self.hsv_bxc = QtWidgets.QLabel(self.verticalLayoutWidget_6)
         font = QtGui.QFont()
-        font.setPointSize(14)
+        font.setPointSize(12)
         font.setBold(False)
         font.setWeight(50)
         self.hsv_bxc.setFont(font)
@@ -578,31 +535,32 @@ class Ui_MainWindow(object):
         self.hsv_des.setAlignment(QtCore.Qt.AlignCenter)
         self.hsv_des.setObjectName("hsv_des")
         self.tabWidget.addTab(self.tab_3, "")
+        self.tab_4 = QtWidgets.QWidget()
+        self.tab_4.setObjectName("tab_4")
+        self.label_3 = QtWidgets.QLabel(self.tab_4)
+        self.label_3.setGeometry(QtCore.QRect(10, 10, 681, 581))
+        self.label_3.setObjectName("label_3")
+        self.tabWidget.addTab(self.tab_4, "")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 717, 26))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 717, 22))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
 
+        # Asigning functions to buttons in one code block
+        self.b_load.clicked.connect(self.load)
+        self.b_start.clicked.connect(self.background)
+        self.g_load.clicked.connect(self.load)
+        self.g_start.clicked.connect(self.grayscale)
+        self.hsv_load.clicked.connect(self.load)
+        self.hsv_start.clicked.connect(self.hsv)
+
         self.retranslateUi(MainWindow)
         self.tabWidget.setCurrentIndex(2)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
-
-        # Boton start del modulo Background Substraction
-        self.b_start.clicked.connect(self.background)
-        # Boton load del modulo Background Substraction
-        self.b_load.clicked.connect(self.load)
-        # Boton start del modulo Grayscale
-        self.g_start.clicked.connect(self.grayscale)
-        # Boton load del modulo Grayscale
-        self.g_load.clicked.connect(self.load)
-        # Boton start del modulo HSV
-        self.hsv_start.clicked.connect(self.hsv)
-        # Boton load del modulo HSV
-        self.hsv_load.clicked.connect(self.load)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -657,6 +615,8 @@ class Ui_MainWindow(object):
         self.groupBox_29.setTitle(_translate("MainWindow", "Output frame"))
         self.groupBox_30.setTitle(_translate("MainWindow", "Decision"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), _translate("MainWindow", "HSV"))
+        self.label_3.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">Prototype software develop as part of the requirements for achieveng </p><p align=\"center\">the Mechanical Engineering Deegre of the Universidad del Atlántico by: <br/></p><p align=\"center\">Diego Balanta García </p><p align=\"center\">dbalanta@mail.uniatlantico.edu.co </p><p align=\"center\">Diego Palomino Rodríguez </p><p align=\"center\">dpalomino@mail.uniatlantico.edu.co <br/></p><p align=\"center\">Project Director: Phd. Ing. Mec. Javier Roldán Mckinley. <br/></p><p align=\"center\">Property of Universidad del Atlántico. </p><p align=\"center\">Barranquilla, Colombia.</p><p align=\"center\">2021</p><p align=\"center\">All rights reserved.</p><p align=\"center\"><br/></p></body></html>"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_4), _translate("MainWindow", "About"))
 
 
 if __name__ == "__main__":
